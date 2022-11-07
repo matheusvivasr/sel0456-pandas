@@ -11,7 +11,7 @@
 
 
 
-## <a id = "DT"></a> Pandas
+## <a id = "DT"></a> Pandas Data Types
 
 Pandas, por padrão quase universal, é importada como `pd`
 
