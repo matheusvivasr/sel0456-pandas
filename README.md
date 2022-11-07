@@ -2,12 +2,14 @@
 
 ## Índice
 1. [Data Types](#DT)
-    1. [Series](#Series)
-    2. [DataFrame](#DataFrame)
-2. [Git](#git)
-    1. [Manipulação de Repositório](#repository)
-    2. [Manipulação dos Ramos](#branch)
-    3. [Fusão dos Ramos](#merge)
+    1. [Series](#d1)
+    2. [DataFrame](#d2)
+2. [Funções](#func)
+    1. [Read CSV](#f1)
+    2. [Loc](#f2)
+    3. [Describe](#f3)
+    4. [unique](#f4)
+    5. []
 
 
 
@@ -20,13 +22,20 @@ import pandas as pd
 ```
 
 
-### <a id = "Series"></a> Series
+### <a id = "d1"></a> Series
 
 Uma `Serie` é uma lista com apenas uma coluna e terá o tipo `pandas.core.series.Series`.
 Por padrão é indexada a partir do 0 até o n-1 de uma série com n elementos, mas o index pode ser persinalizado se passado como segundo argumento.
 
 ```
 a = pd.Series([1,2,3,4,5],index=["a","b","c","d","e"])
+
+[OUT]
+a    1
+b    2
+c    3
+d    4
+e    5
 ```
 
 O argumento da série também pode ser um dicionário;
@@ -35,6 +44,14 @@ Ao passar como dicionário, a ordem pode ser rearrumada(inclusive inserindo iten
 ```
 dict = {"a":1,"b":2,"c":3,"d":4,"e":5}
 b = pd.Series(dict, index=["c","b","x","a","d","e"])
+
+[OUT]
+c    3.0
+b    2.0
+X    NaN
+a    1.0
+d    4.0
+e    5.0
 ```
 
 
@@ -48,19 +65,32 @@ a[:2]   #dois primeiros elementos de 'a'    (Parte superior da lista )
 a[-2:]  #dois últimos elementos de 'a'      (      inferior          )
 ```
 
+Operações podem ser feitas diretamente com a serie inteira
+```
+a*2
 
+[OUT]
+a     2
+b     4
+c     6
+d     8
+e    10
+```
 
-### <a id = "DataFrame"></a> Função Recursiva
+### <a id = "d2"></a> Data Frame
 
-Foi implementada uma função `fibo()` que funciona analogamente.
+Um `DataFrame` é a forma de tabela de pandas.
 
+```
+c = pd.DataFrame({"Dia":["seg","ter","qua","qui","sex"],"Horas":[2,4,8,7,8]})
+```
+Possui as mesmas características da Series.
 
-
-## <a id = "git"></a> Git
+## <a id = "func"></a> Git
 A ferramenta de versionamento de código
 
 
-###  <a id = "repository"></a> Manipulação de Repositório
+###  <a id = "f1"></a> Read CSV
 
 Foram utilizados os seguintes comandos para o manuseio das versões em um único ramo do código:
 ```

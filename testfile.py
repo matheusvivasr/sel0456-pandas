@@ -12,3 +12,6 @@ dict = {"a":1,"b":2,"c":3,"d":4,"e":5}
 b = pd.Series(dict, index=["c","b","X","a","d","e"])
 print(b)
 print(b["c"])
+
+c = pd.DataFrame({"Dia":["seg","ter","qua","qui","sex"],"Horas":[2,4,8,7,8]})
+print(c)
