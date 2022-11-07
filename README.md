@@ -11,7 +11,7 @@
 
 
 
-## <a id = "DT"></a> Programa Fibonacci
+## <a id = "DT"></a> Pandas
 
 Pandas, por padrão quase universal, é importada como `pd`
 
@@ -20,7 +20,7 @@ import pandas as pd
 ```
 
 
-### <a id = "Series"></a> Iteração em Loop
+### <a id = "Series"></a> Series
 
 Uma `Serie` é uma lista com apenas uma coluna e terá o tipo `pandas.core.series.Series`.
 Por padrão é indexada a partir do 0 até o n-1 de uma série com n elementos, mas o index pode ser persinalizado se passado como segundo argumento.
