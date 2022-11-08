@@ -3,8 +3,6 @@ import pandas as pd
 a = pd.Series([1,2,3,4,5],index=["a","b","c","d","e"])
 print(a)
 
-print(a.T)
-
 print(a[:2])
 print("\nc   ",a["c"],"\n")
 print(a[-2:])
@@ -19,3 +17,5 @@ print(b.size)
 c = pd.Series([[1, 2, 3], 'foo', [], [3, 4]])
 print(c.explode(ignore_index = True))
 
+d = pd.Series([4+3j,-1,4,1.3+3j])
+print(d.abs())
