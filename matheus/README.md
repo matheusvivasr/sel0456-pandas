@@ -29,6 +29,7 @@ Por padrão é indexada a partir do 0 até o n-1 de uma série com n elementos, 
 
 ```
 a = pd.Series([1,2,3,4,5],index=["a","b","c","d","e"])
+print(a)
 
 [OUT]
 a    1
@@ -44,6 +45,7 @@ Ao passar como dicionário, a ordem pode ser rearrumada(inclusive inserindo iten
 ```
 dict = {"a":1,"b":2,"c":3,"d":4,"e":5}
 b = pd.Series(dict, index=["c","b","x","a","d","e"])
+print(b)
 
 [OUT]
 c    3.0
@@ -65,9 +67,10 @@ a[:2]   #dois primeiros elementos de 'a'    (Parte superior da lista )
 a[-2:]  #dois últimos elementos de 'a'      (      inferior          )
 ```
 
-Operações podem ser feitas diretamente com a serie inteira
+Operações podem ser feitas diretamente com a serie inteira.(soma, subtração, e divisão também funcionam)
 ```
-a*2
+c = a*2
+print(c)
 
 [OUT]
 a     2
@@ -82,12 +85,22 @@ e    10
 Um `DataFrame` é a forma de tabela de pandas.
 
 ```
-c = pd.DataFrame({"Dia":["seg","ter","qua","qui","sex"],"Horas":[2,4,8,7,8]})
+d = pd.DataFrame({"Dia":["seg","ter","qua","qui","sex"],"Horas":[2,4,8,7,8]})
+print(d)
+
+[OUT]
+   Dia  Horas
+0  seg      2
+1  ter      4
+2  qua      8
+3  qui      7
+4  sex      8
 ```
 Possui as mesmas características da Series.
 
-## <a id = "func"></a> Git
-A ferramenta de versionamento de código
+## <a id = "func"></a> Funções
+
+DataFrames são bastante utilizafos em projetos de análise de dados e tabelas
 
 
 ###  <a id = "f1"></a> Read CSV
